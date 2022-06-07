@@ -1,0 +1,14 @@
+{
+  "name": "dang-ky-user-va-hien-thi-ra-user-vua-dang-ky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qs": "^6.10.3"
+  }
+}
