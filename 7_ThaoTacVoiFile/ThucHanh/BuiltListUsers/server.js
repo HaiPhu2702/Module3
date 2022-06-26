@@ -18,7 +18,7 @@ http.createServer((req, res) => {
         });
     });
 
-    fs.readFile('./views/index.html', "utf8", function (err, data) {
+    fs.readFile('./views/list.html', "utf8", function (err, data) {
         res.writeHead(200,{"Content-Type":"text/html"})
         data=data.replace('{list-user}',html);
         res.write(data);

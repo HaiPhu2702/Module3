@@ -19,7 +19,7 @@ http.createServer((req, res)=>{
                      })
             })
 
-    fs.readFile('./views/index.html',"utf8",function(err, data){
+    fs.readFile('./views/list.html',"utf8",function(err, data){
         res.writeHead(200, {"Content-Type": "text/html"})
         data = data.replace('{content}', html)
         res.write(data);
@@ -31,3 +31,6 @@ http.createServer((req, res)=>{
 .listen("8080",()=>{
     console.log("server listening")
 })
+
+
+

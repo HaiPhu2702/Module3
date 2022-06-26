@@ -2,7 +2,7 @@
 const http= require('http');
 const fs= require('fs');
 let server=http.createServer((req, res) =>{
-    fs.readFile('./views/index.html',"utf-8",(err, data)=>{
+    fs.readFile('./views/list.html',"utf-8",(err, data)=>{
         if (err) {
             console.log(err)
         }

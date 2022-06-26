@@ -17,8 +17,6 @@ http.createServer((req, res) => {
       const chooseHandler=router.profile;
         chooseHandler(req,res);
     }
-
-
 })
 .listen('3000', function(){
     console.log("running server")

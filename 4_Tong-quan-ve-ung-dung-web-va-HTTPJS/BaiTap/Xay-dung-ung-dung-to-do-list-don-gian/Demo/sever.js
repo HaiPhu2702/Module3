@@ -4,7 +4,7 @@ const qs = require("qs");
 
 const sever=http.createServer((req, res) => {
     if(req.method==='GET'){
-        fs.readFile('index.html', 'utf8',(err, data) => {
+        fs.readFile('list.html', 'utf8',(err, data) => {
             if (err) {
                 console.log(err.message)
             }

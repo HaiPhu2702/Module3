@@ -46,7 +46,7 @@ http.createServer((req, res) =>{
 
         // is directory
         if(fs.statSync(pathname).isDirectory()){
-            pathname+='index.html';
+            pathname+='list.html';
         }
 
         //read file

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+
+</head>
+<body>
+<h1>page</h1>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<!--<script>-->
+<!--    const socket = io();-->
+<!--</script>-->
+
+<script>
+    const socket=io('http://localhost:8080');
+
+    socket.on('send',(data1,data2)=>{
+        console.log(data1,data2)
+
+    })
+
+    socket.emit('user-login','Phu')
+</script>
+<!--<script defer src="../public/client.js"></script>-->
+</body>
+</html>

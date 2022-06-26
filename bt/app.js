@@ -79,7 +79,7 @@ const server = http.createServer(((req, res) => {
         case '/search':
             let keyword = queryString.name;
             let dataSearch = search(keyword);
-            fs.readFile('./views/index.html','utf8', ((err, data) => {
+            fs.readFile('./views/list.html','utf8', ((err, data) => {
                 if (err) {
                     console.log(err)
                 }

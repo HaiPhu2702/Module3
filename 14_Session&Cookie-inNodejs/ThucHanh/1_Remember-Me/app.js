@@ -8,28 +8,46 @@ const url=require("url");
 http.createServer((req, res) => {
     const query =url.parse(req.url,true).query;
 
-    if(query && query.name && query.remember) {
+    // if(query && query.name && query.remember) {
+    //
+    //     //set cookie
+    //     res.setHeader('set-cookie',cookie.serialize('name',String(query.name),{
+    //         httpOnly:true,
+    //         maxAge:60*60*24*7,
+    //         secure:true,
+    //         expires:new Date("2022-06-14")
+    //     }))
+    //     //back after setting cookie
+    //     res.statusCode=302;
+    //     res.setHeader('Location',req.headers.referer || '/');
+    //     res.end();
+    //     return ;
+    // }
+    //
+    // // doc ma cookie da dc set trong ung dung
+    //
+    // const cookies = cookie.parse(req.headers.cookie || '')
+    // const name = cookies.name
+    //
+    // res.setHeader('Content-Type',"text/html;charset=utf-8");
 
-        //set cookie
+
+    if(query&& query.name && query.remember){
         res.setHeader('set-cookie',cookie.serialize('name',String(query.name),{
             httpOnly:true,
-            maxAge:60*60*24*7,
-            secure:true,
-            expires:new Date("2022-06-14")
+            maxAge:60*60*24*7
         }))
-        //back after setting cookie
+
         res.statusCode=302;
-        res.setHeader('Location',req.headers.referer || '/');
+        res.setHeader("location",req.headers.referer || '/')
         res.end();
         return ;
     }
 
-    // doc ma cookie da dc set trong ung dung
-
     const cookies = cookie.parse(req.headers.cookie || '')
-    const name = cookies.name
+    const name = cookies.name;
 
-    res.setHeader('Content-Type',"text/html;charset=utf-8");
+    res.setHeader('Content-Type', 'text/html;charset=utf-8')
 
 
     if (name) {
